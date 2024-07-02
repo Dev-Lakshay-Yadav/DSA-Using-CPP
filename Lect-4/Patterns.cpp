@@ -740,39 +740,60 @@ int main ()
     // }
 
 
+    // // Pattern-28
+    // //  12344321
+    // //  123**321
+    // //  12****21
+    // //  1******1
+    // int n;
+    // cin>>n;
+    // int row=1,col;
+    // while(row<=n)
+    // {
+    //     // Triangle-1
+    //     col=1;
+    //     while (col<=n-row+1) 
+    //     { 
+    //         cout<<col; 
+    //         col++;
+    //     }
+    //     // Triangle-2
+    //     col=1;
+    //     while (col<=row-1)
+    //     {
+    //         cout<<"**";
+    //         col++;
+    //     }
+    //     // Triangle-3
+    //     col=n-row+1;
+    //     while (col>=1)
+    //     {
+    //         cout<<col;
+    //         col--;
+    //     }
+    //     cout<<endl;
+    //     row++;   
+    // }
+
+
     // Pattern-28
-    //  12344321
-    //  123**321
-    //  12****21
-    //  1******1
+//  * * * * * * *
+//   * * * * *
+//    * * *
+//     *
     int n;
     cin>>n;
-    int row=1,col;
-    while(row<=n)
-    {
-        // Triangle-1
-        col=1;
-        while (col<=n-row+1) 
-        { 
-            cout<<col; 
-            col++;
+    for (int i = n; i > 0; i--) {
+        // Inner loop for leading spaces in each row
+        for (int j = 0; j < n - i; j++) {
+            cout << " ";
         }
-        // Triangle-2
-        col=1;
-        while (col<=row-1)
-        {
-            cout<<"**";
-            col++;
+        // Inner loop for printing asterisks in each row
+        for (int k = 0; k < 2 * i - 1; k++) {
+            cout <<"*";
         }
-        // Triangle-3
-        col=n-row+1;
-        while (col>=1)
-        {
-            cout<<col;
-            col--;
-        }
+        // Move to the next line after each row
         cout<<endl;
-        row++;   
     }
  return 0;
 }
