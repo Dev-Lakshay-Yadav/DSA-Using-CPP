@@ -50,9 +50,7 @@ void display(int arr[], int n)
 //         i++;
 //     }
 // }
-
-
-// // //Que-3- Find Duplicate
+// //  Good Approach
 // void findUnique(int arr[], int n)
 // {
 //     int ans =0 ;
@@ -64,33 +62,35 @@ void display(int arr[], int n)
 // }
 
 
-// // Que-3- Find Duplicate
+// // Que-3- unique number of occurance
+// bool UniqueOccurances(int arr[],int n){
+// }
+
+
+// // Que-4- Find Duplicate
 // void findDuplicate(int arr[], int n)
 // {
-//     int i = 0, temp = 0;
-//     while (i < n)
+//     int ans=0;
+//     for (int i = 0; i < n; i++)
 //     {
-//         temp = arr[i];
-//         int j = i + 1;
-//         while (j < n)
-//         {
-//             if (arr[i] == arr[j])
-//             {
-//                 cout << "Duplicate value is : " << arr[i];
-//                 exit(0);
-//             }
-//             j++;
-//         }
-//         i++;
+//         ans = ans^arr[i];
 //     }
-//     cout << "No Duplicate";
+//     for (int i = 1; i < n; i++)
+//     {
+//         ans = ans^i;
+//     }
+//     cout<<ans<<" is duplicate";
 // }
+
+
+
+
 
 
 int main()
 {
     int size = 7;
-    int arr[size] = {2, 3, 1, 6, 3, 6, 2};
+    int arr[size] = {2, 3, 1, 6, 4, 5, 2};
     cout << "Original Array : ";
     display(arr, size);
 
@@ -101,18 +101,23 @@ int main()
     // display(arr,size);
 
 
-    // // Que-2- Find unique element
+    // // Que-2- Find unique element from an array of odd number of elements {2,1,4,5,5,2,1} --> 4 is unique
     // findUnique(arr, size);
 
+    // // Que-3- unique number of occurance arr[]={1,2,2,1,1,3}
+    // So occurance of numbers is 1->3 times, 2->2 times & 3->1 time so all 3 numbers are uniquely occur then return true otherwise false
+    // eg-2- arr[]={1,2,2,1,3}  here 1 and 2 comes same 2 times so return false
+    // UniqueOccurances(arr, size);
 
 
-    // // Que-3- Find Duplicate
+    // // Que-4- Find Duplicate  - input is always real number (1,2,3,4,5,6,7,--) with a number repeat
     // findDuplicate(arr, size);
 
 
+    // Que-5- Find all Duplicates
 
 
-    // Que-4- Find Array Intersection {1,2,3} , {3,4,5}   ans-3
+    // Que-6-Intersection of Two Arrays 
 
     // Que-5- Pair Sum
     // Que-6- Triplet Sum
