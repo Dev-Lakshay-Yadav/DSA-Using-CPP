@@ -125,28 +125,28 @@ void display(int arr[], int n)
 // }
 
 
-// // Que-7- Pair Sum
-// void PairSum(int arr[],int n,int sum)
-// {
-//     int i=0,j=n,count=1;
-//     while(i<n && j>i)
-//     {
-//         if(arr[i]+arr[j] == sum)
-//         {
-//             cout<<"Pair Number "<<count<<" is : "<<arr[i]<<" + "<<arr[j]<<" = "<<sum<<endl;
-//             i++;
-//             n--;
-//             count++;
-//         }
-//         else if((arr[i]+arr[j])>sum)
-//         {
-//             j--;
-//         }
-//         else{
-//             i++;
-//         }
-//     }
-// }
+// Que-7- Pair Sum
+void PairSum(int arr[],int n,int sum)
+{
+    int i=0,j=n,count=1;
+    while(i<n && j>i)
+    {
+        if(arr[i]+arr[j] == sum)
+        {
+            cout<<"Pair Number "<<count<<" is : "<<arr[i]<<" + "<<arr[j]<<" = "<<sum<<endl;
+            i++;
+            n--;
+            count++;
+        }
+        else if((arr[i]+arr[j])>sum)
+        {
+            j--;
+        }
+        else{
+            i++;
+        }
+    }
+}
 
 
 // // Que-8- Triple Sum
@@ -198,25 +198,25 @@ void display(int arr[], int n)
 // }
 
 
-// Que-10- sort 0's , 1's & 2's
-void Sort012(int arr[],int n)
-{
-    int start = 0;
-    int mid = 0;
-    int end = n - 1;
-    while (mid <= end) {
-        if (arr[mid] == 0) {
-            swap(arr[start], arr[mid]);
-            start++;
-            mid++;
-        } else if (arr[mid] == 1) {
-            mid++;
-        } else { // nums[mid] == 2
-            swap(arr[mid], arr[end]);
-            end--;
-        }
-    }
-}
+// // Que-10- sort 0's , 1's & 2's
+// void Sort012(int arr[],int n)
+// {
+//     int start = 0;
+//     int mid = 0;
+//     int end = n - 1;
+//     while (mid <= end) {
+//         if (arr[mid] == 0) {
+//             swap(arr[start], arr[mid]);
+//             start++;
+//             mid++;
+//         } else if (arr[mid] == 1) {
+//             mid++;
+//         } else { // nums[mid] == 2
+//             swap(arr[mid], arr[end]);
+//             end--;
+//         }
+//     }
+// }
 
 
 
@@ -263,10 +263,10 @@ int main()
     // findArrayIntersection(arr1,arr2,n,m);
 
 
-    // // Que-7- Find Pair Sum
-    // int n=5,sum=5;
-    // int arr[n]={1,2,3,4,5};
-    // PairSum(arr,n,sum);
+    // Que-7- Find Pair Sum
+    int n=5,sum=5;
+    int arr[n]={1,2,3,4,5};
+    PairSum(arr,n,sum);
 
 
     // // Que-8- Find Triple Sum
@@ -285,14 +285,14 @@ int main()
     // display(arr,n);
 
 
-    // Que-10- Sort 0's ,1's  and 2's
-    int n=9;
-    int arr[n]={0,2,2,1,0,1,1,0,2};
-    cout<<"Original array is : ";
-    display(arr,n);
-    Sort012(arr,n);
-    cout<<"Sorted array is : ";
-    display(arr,n);
+    // // Que-10- Sort 0's ,1's  and 2's
+    // int n=9;
+    // int arr[n]={0,2,2,1,0,1,1,0,2};
+    // cout<<"Original array is : ";
+    // display(arr,n);
+    // Sort012(arr,n);
+    // cout<<"Sorted array is : ";
+    // display(arr,n);
 
 
     return 0;
