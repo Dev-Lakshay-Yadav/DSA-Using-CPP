@@ -46,7 +46,7 @@ int main ()
     // cout<<"Difference is : "<<diff;
 
 
-    // count number of 1 bits
+    // count number of 1 bits   Hamming Weight Problem
     int n,count=0;
     cin>>n;
     while(n!=0)

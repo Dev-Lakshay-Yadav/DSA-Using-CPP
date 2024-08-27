@@ -62,7 +62,7 @@ void display(int arr[], int n)
 // }
 
 
-// // Que-3- unique number of occurance
+// // Que-3- unique number of occurance    -> Hash Map se hoga
 // bool UniqueOccurances(int arr[],int n){
 // }
 
@@ -125,28 +125,28 @@ void display(int arr[], int n)
 // }
 
 
-// Que-7- Pair Sum
-void PairSum(int arr[],int n,int sum)
-{
-    int i=0,j=n,count=1;
-    while(i<n && j>i)
-    {
-        if(arr[i]+arr[j] == sum)
-        {
-            cout<<"Pair Number "<<count<<" is : "<<arr[i]<<" + "<<arr[j]<<" = "<<sum<<endl;
-            i++;
-            n--;
-            count++;
-        }
-        else if((arr[i]+arr[j])>sum)
-        {
-            j--;
-        }
-        else{
-            i++;
-        }
-    }
-}
+// // Que-7- Pair Sum
+// void PairSum(int arr[],int n,int sum)
+// {
+//     int i=0,j=n,count=1;
+//     while(i<n && j>i)
+//     {
+//         if(arr[i]+arr[j] == sum)
+//         {
+//             cout<<"Pair Number "<<count<<" is : "<<arr[i]<<" + "<<arr[j]<<" = "<<sum<<endl;
+//             i++;
+//             n--;
+//             count++;
+//         }
+//         else if((arr[i]+arr[j])>sum)
+//         {
+//             j--;
+//         }
+//         else{
+//             i++;
+//         }
+//     }
+// }
 
 
 // // Que-8- Triple Sum
@@ -263,10 +263,10 @@ int main()
     // findArrayIntersection(arr1,arr2,n,m);
 
 
-    // Que-7- Find Pair Sum
-    int n=5,sum=5;
-    int arr[n]={1,2,3,4,5};
-    PairSum(arr,n,sum);
+    // // Que-7- Find Pair Sum
+    // int n=5,sum=5;
+    // int arr[n]={1,2,3,4,5};
+    // PairSum(arr,n,sum);
 
 
     // // Que-8- Find Triple Sum
