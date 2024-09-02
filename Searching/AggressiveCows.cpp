@@ -1,39 +1,36 @@
 #include <iostream>
+#include <algorithm>
 using namespace std;
 
 bool isPossible(int arr[], int n, int m, int mid)
 {
     int distValue = 0, cowCount = 1;
-    // int arr[] = sort(arr) ;
+    std::sort(arr, arr + n);
     for (int i = 0; i < n; i++)
     {
-        if (distValue + arr[i] >= mid)
-        {
-            distValue += arr[i];
-        }
-        else
+        if (arr[i] - distValue >= mid)
         {
             cowCount++;
-            if(cowCount > m || arr[i]<distValue)
+            if (cowCount == m)
             {
-                return false;
+                return true;
             }
             distValue = arr[i];
         }
     }
-    return true;
+    return false;
 }
 
 int aggressiveCows(int arr[], int n, int m)
 {
-    int i = 0, 
-        start = 0, 
+    int i = 0,
+        start = 0,
         ans = -1,
-        maxi =-1;
+        maxi = -1;
 
     for (int i = 0; i < n; i++)
     {
-        maxi = max(maxi,arr[i]);
+        maxi = max(maxi, arr[i]);
     }
     int end = maxi;
 
@@ -55,9 +52,9 @@ int aggressiveCows(int arr[], int n, int m)
 
 int main()
 {
-    int arr[]={4,2,1,3,6};
-    int n=5,m=2;
-    cout<<"ans is : "<<aggressiveCows(arr,n,m);
+    int arr[] = {4, 2, 1, 3, 6};
+    int n = 5, m = 2;
+    cout << "ans is : " << aggressiveCows(arr, n, m);
 
     return 0;
 }
