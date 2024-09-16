@@ -149,30 +149,30 @@ void display(int arr[], int n)
 // }
 
 
-// // Que-8- Triple Sum
-// void PairSum(int arr[],int n,int sum)
-// {
-//     int i=0,count=1;
-//     while(i<n)
-//     {
-//         int j=i+1;
-//         while(j<n)
-//         {
-//             int k=j+1;
-//             while(k<n)
-//             {
-//                 if(arr[i]+arr[j]+arr[k] == sum)
-//                 {
-//                     cout<<"Pair Number "<<count<<" is : "<<arr[i]<<" + "<<arr[j]<<" + "<<arr[k]<<" = "<<sum<<endl;
-//                     count++;
-//                 }
-//                 k++;
-//             }
-//             j++;
-//         }
-//         i++;
-//     }
-// }
+// Que-8- Triple Sum
+void PairSum(int arr[],int n,int sum)
+{
+    int i=0,count=1;
+    while(i<n)
+    {
+        int j=i+1;
+        while(j<n)
+        {
+            int k=j+1;
+            while(k<n)
+            {
+                if(arr[i]+arr[j]+arr[k] == sum)
+                {
+                    cout<<"Pair Number "<<count<<" is : "<<arr[i]<<" + "<<arr[j]<<" + "<<arr[k]<<" = "<<sum<<endl;
+                    count++;
+                }
+                k++;
+            }
+            j++;
+        }
+        i++;
+    }
+}
 
 
 // // Que-9- sort 0's & 1's
@@ -269,10 +269,10 @@ int main()
     // PairSum(arr,n,sum);
 
 
-    // // Que-8- Find Triple Sum
-    // int n=9,sum=8;
-    // int arr[n]={0,1,3,2,6,7,5,8,9};
-    // PairSum(arr,n,sum);
+    // Que-8- Find Triple Sum
+    int n=9,sum=8;
+    int arr[n]={0,1,3,2,6,7,5,8,9};
+    PairSum(arr,n,sum);
 
 
     // // Que-9- Sort 0's and 1's

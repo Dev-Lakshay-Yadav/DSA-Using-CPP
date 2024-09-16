@@ -15,13 +15,20 @@ void bubbleSort(int arr[], int n)
     while (k != 0)
     {
         i=0;
+        bool swapped =false;
         while (i < k)
         {
             if (arr[i] > arr[i + 1])
             {
                 swap(arr[i], arr[i + 1]);
+                swapped = true;
             }
             i++;
+        }
+        if(swapped == false)
+        {
+            // Already Sorted
+            break;
         }
         k--;
     }
