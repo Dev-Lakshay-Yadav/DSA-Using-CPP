@@ -13,20 +13,20 @@ void display (vector<int> v)
 }
 
 // Que-1- Rotate Array
-// void rotateArray(vector <int> arr,int k)
-// {
-//     int size = arr.size();
-//     cout<<"Original array is : ";
-//     display(arr);
-//     vector <int> temp(size);
-//     for (int i = 0; i < size; i++)
-//     {
-//         temp[(i+k)%size] = arr[i];
-//     }
-//     arr = temp;      // copying temp array values in arr array
-//     cout<<"Rotated array is : ";
-//     display(arr);
-// }
+void rotateArray(vector <int> arr,int k)
+{
+    int size = arr.size();
+    cout<<"Original array is : ";
+    display(arr);
+    vector <int> temp(size);
+    for (int i = 0; i < size; i++)
+    {
+        temp[(i+k)%size] = arr[i];
+    }
+    arr = temp;      // copying temp array values in arr array
+    cout<<"Rotated array is : ";
+    display(arr);
+}
 
 
 // // Que-2- Rotate Array
@@ -102,14 +102,14 @@ int main ()
 {
 
     // Que-1- Rotate Array
-    // vector <int> arr ; 
-    // arr.push_back(1);
-    // arr.push_back(7);
-    // arr.push_back(9);  
-    // arr.push_back(11);
-    // int k=1;           // array elements ko 2 step right kar do or rightmost ko leftmost ke side shift cyclic way
-    // // I/P  ->  {1,7,9,1}   rotate by 2  so  O/P -> {9,11,1,7}
-    // rotateArray(arr,k);
+    vector <int> arr ; 
+    arr.push_back(1);
+    arr.push_back(7);
+    arr.push_back(9);  
+    arr.push_back(11);
+    int k=1;           // array elements ko 2 step right kar do or rightmost ko leftmost ke side shift cyclic way
+    // I/P  ->  {1,7,9,1}   rotate by 2  so  O/P -> {9,11,1,7}
+    rotateArray(arr,k);
 
 
     // // Que-2- check if given array is sorted and rotated

@@ -78,57 +78,57 @@ void display(vector<int> arr, int n)
 // }
 
 
-// Que-4- Merge Sorted Array 2 arrays
-void mergeSorted2Array(vector<int> &arr1, vector<int> &arr2)
-{
-    int size1 = arr1.size();
-    int size2 = arr2.size();
-    cout << "Array 1 is : ";
-    display(arr1, size1);
-    cout << "Array 2 is : ";
-    display(arr2, size2);
-    for (int i = size1-1; i >= 0; i--)
-    {
-        if(arr1[i] == 0)
-        {
-            arr1.pop_back();
-        }
-        else
-        {
-            arr1.push_back(arr2[i]);
-        }
-    }
-    sort(arr1.begin(),arr1.end());
-    cout << "Final Array is : ";
-    display(arr1, size1);
-}
-
-
-// // Que-5- Move Zeroes Right
-// void moveZeroesRight(vector<int> &arr)
+// // Que-4- Merge Sorted Array 2 arrays
+// void mergeSorted2Array(vector<int> &arr1, vector<int> &arr2)
 // {
-//     int size = arr.size();
-//     cout << "Original Array is : ";
-//     display(arr, size);
-//     int i = 0,j=i+1;
-//     while (j<size)
+//     int size1 = arr1.size();
+//     int size2 = arr2.size();
+//     cout << "Array 1 is : ";
+//     display(arr1, size1);
+//     cout << "Array 2 is : ";
+//     display(arr2, size2);
+//     for (int i = size1-1; i >= 0; i--)
 //     {
-//         if(arr[i]==0 && arr[j]!=0)
+//         if(arr1[i] == 0)
 //         {
-//             swap(arr[i],arr[j]);
-//         }
-//         else if(arr[i]==0)
-//         {
-//             j++;
+//             arr1.pop_back();
 //         }
 //         else
 //         {
-//             i++;
+//             arr1.push_back(arr2[i]);
 //         }
 //     }
+//     sort(arr1.begin(),arr1.end());
 //     cout << "Final Array is : ";
-//     display(arr, size);
+//     display(arr1, size1);
 // }
+
+
+// Que-5- Move Zeroes Right
+void moveZeroesRight(vector<int> &arr)
+{
+    int size = arr.size();
+    cout << "Original Array is : ";
+    display(arr, size);
+    int i = 0,j=i+1;
+    while (j<size)
+    {
+        if(arr[i]==0 && arr[j]!=0)
+        {
+            swap(arr[i],arr[j]);
+        }
+        else if(arr[i]==0)
+        {
+            j++;
+        }
+        else
+        {
+            i++;
+        }
+    }
+    cout << "Final Array is : ";
+    display(arr, size);
+}
 
 int main()
 {
@@ -161,13 +161,13 @@ int main()
     // mergeSortedArray(arr1, arr2, arr3);
 
 
-    // Que-4- Merge Sorted Array 2 arrays
-    vector<int> arr1 = {1,2,3,0,0,0}, arr2 = {1,2,3};
-    mergeSorted2Array(arr1, arr2);
+    // // Que-4- Merge Sorted Array 2 arrays
+    // vector<int> arr1 = {1,2,3,0,0,0}, arr2 = {1,2,3};
+    // mergeSorted2Array(arr1, arr2);
 
-    // // Que-5- Move Zeroes Right
-    // vector<int> arr = {0,1,0,3,12,0};
-    // moveZeroesRight(arr);
+    // Que-5- Move Zeroes Right
+    vector<int> arr = {0,1,0,3,12,0};
+    moveZeroesRight(arr);
 
 
     return 0;

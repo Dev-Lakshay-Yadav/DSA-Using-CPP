@@ -113,128 +113,128 @@ using namespace std;
 //     return s;
 // }
 
-// // Que-5- Find an element in a rotated sorted array
-// int findKeyInRotatedArray(int arr[], int n, int key)
-// {
-//     int s = 0, e = n - 1, mid = 0;
-//     while (s < e)
-//     {
-//         mid = s + (e - s) / 2;
-//         if (arr[mid] == key)
-//         {
-//             return mid;
-//         }
-//         else if (arr[mid] >= arr[s])
-//         {
-//             s = mid + 1;
-//         }
-//         else
-//         {
-//             e = mid;
-//         }
-//     }
-//     if (key > arr[mid])
-//     {
-//         int start = 0, end = mid - 1;
-//         while (start <= end)
-//         {
-//             int median = (start + end) / 2;
-//             if (arr[median] == key)
-//             {
-//                 return median;
-//             }
-//             else if (arr[median] > key)
-//             {
-//                 end = median;
-//             }
-//             else
-//             {
-//                 start = median;
-//             }
-//         }
-//         return -1;
-//     }
-//     else
-//     {
-//         int start = s, end = n - 1;
-//         while (start <= end)
-//         {
-//             int median = (start + end) / 2;
-//             if (arr[median] == key)
-//             {
-//                 return median;
-//             }
-//             else if (arr[median] > key)
-//             {
-//                 start = median+1;
-//             }
-//             else
-//             {
-//                 end = median-1;
-//             }
-//         }
-//         return -1;
-//     }
-// }
-
-// Que-6- Find Square root using binary search
-int mysqrtint(int n)
+// Que-5- Find an element in a rotated sorted array
+int findKeyInRotatedArray(int arr[], int n, int key)
 {
-    int s = 0, e = n, mid = 0, sqrt = 0;
-    while (s <= e)
+    int s = 0, e = n - 1, mid = 0;
+    while (s < e)
     {
-        mid = (s + e) / 2;
-        sqrt = mid * mid;
-        // cout<<"hello"<<mid;
-        if (sqrt == n)
+        mid = s + (e - s) / 2;
+        if (arr[mid] == key)
         {
             return mid;
         }
-        else if (sqrt > n)
-        {
-            e = mid - 1;
-        }
-        else
+        else if (arr[mid] >= arr[s])
         {
             s = mid + 1;
         }
-    }
-    if (mid * mid > n)
-    {
-        return mid - 1;
-    }
-    else
-    {
-        return mid;
-    }
-}
-float mysqrt(float n)
-{
-    float intsqrt = mysqrtint(n);
-    float s = intsqrt, e = intsqrt + 1;
-    float mid;
-    if (s * s == n)
-    {
-        return s;
-    }
-    while (e - s > 0.001)
-    {
-        mid = (s + e) / 2;
-        if (mid * mid == n)
-        {
-            return mid;
-        }
-        else if (mid * mid > n)
+        else
         {
             e = mid;
         }
-        else
-        {
-            s = mid;
-        }
     }
-    return mid;
+    if (key > arr[mid])
+    {
+        int start = 0, end = mid - 1;
+        while (start <= end)
+        {
+            int median = (start + end) / 2;
+            if (arr[median] == key)
+            {
+                return median;
+            }
+            else if (arr[median] > key)
+            {
+                end = median;
+            }
+            else
+            {
+                start = median;
+            }
+        }
+        return -1;
+    }
+    else
+    {
+        int start = s, end = n - 1;
+        while (start <= end)
+        {
+            int median = (start + end) / 2;
+            if (arr[median] == key)
+            {
+                return median;
+            }
+            else if (arr[median] > key)
+            {
+                start = median+1;
+            }
+            else
+            {
+                end = median-1;
+            }
+        }
+        return -1;
+    }
 }
+
+// // Que-6- Find Square root using binary search
+// int mysqrtint(int n)
+// {
+//     int s = 0, e = n, mid = 0, sqrt = 0;
+//     while (s <= e)
+//     {
+//         mid = (s + e) / 2;
+//         sqrt = mid * mid;
+//         // cout<<"hello"<<mid;
+//         if (sqrt == n)
+//         {
+//             return mid;
+//         }
+//         else if (sqrt > n)
+//         {
+//             e = mid - 1;
+//         }
+//         else
+//         {
+//             s = mid + 1;
+//         }
+//     }
+//     if (mid * mid > n)
+//     {
+//         return mid - 1;
+//     }
+//     else
+//     {
+//         return mid;
+//     }
+// }
+// float mysqrt(float n)
+// {
+//     float intsqrt = mysqrtint(n);
+//     float s = intsqrt, e = intsqrt + 1;
+//     float mid;
+//     if (s * s == n)
+//     {
+//         return s;
+//     }
+//     while (e - s > 0.001)
+//     {
+//         mid = (s + e) / 2;
+//         if (mid * mid == n)
+//         {
+//             return mid;
+//         }
+//         else if (mid * mid > n)
+//         {
+//             e = mid;
+//         }
+//         else
+//         {
+//             s = mid;
+//         }
+//     }
+//     return mid;
+// }
 
 int main()
 {
@@ -265,15 +265,15 @@ int main()
     // int arr[n] = {6,8,10,17,5,3,1};
     // cout<<"Smallest number in array is : "<<pivotinArray(arr,n);
 
-    // // Que-5- Find an element in a rotated sorted array
-    // int n = 7;
-    // int arr[n] = {6, 8, 10, 17, 5, 3, 1};
-    // int key = 17;
-    // cout << "Searched number in array is at index : " <<findKeyInRotatedArray(arr, n, key);
+    // Que-5- Find an element in a rotated sorted array
+    int n = 7;
+    int arr[n] = {6, 8, 10, 17, 5, 3, 1};
+    int key = 17;
+    cout << "Searched number in array is at index : " <<findKeyInRotatedArray(arr, n, key);
 
-    // Que-6- Find Square root using binary search
-    int n = 8;
-    cout << "Square root of " << n << " is : " << mysqrt(n);
+    // // Que-6- Find Square root using binary search
+    // int n = 8;
+    // cout << "Square root of " << n << " is : " << mysqrt(n);
 
     return 0;
 }
